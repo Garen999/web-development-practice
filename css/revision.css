@@ -1,0 +1,27 @@
+body {
+    background-color: grey;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+p {
+    font-size: 20px;
+    border: 2px solid black;
+} 
+
+.important {
+    color: red;
+}
+        
+div {
+    border: 2px solid white;
+    padding: 20px;
+    margin: 30px;
+}
+        
+#id {
+    color: yellow;
+}

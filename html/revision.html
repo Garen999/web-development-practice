@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html> <!--Need html tags-->
+<head>
+    <title>My Revision Webpage</title> <!--Only need quotes for attributes--> 
+    <link rel="stylesheet" type="text/css" href="../css/revision.css">
+</head>
+<body>
+    <div>
+        <button onclick="changeMessage()">Change Heading</button>
+        <h1 id="mainHeading">Computer Science Revision</h1>
+        <p>
+            Computer Science is the study of how data is represented, 
+            processed and communicated using computer systems. 
+            In OCR A Level Computer Science, 
+            students develop both practical programming skills and a deeper understanding of the theory behind computers, 
+            including algorithms, data structures, computer architecture, networking and cybersecurity. 
+            The course also encourages problem solving and computational thinking, 
+            allowing students to design efficient solutions to real-world problems while considering the ethical, legal and environmental impacts of technology.
+        </P> <!--Should usually use lowercase for tags-->
+    </div>
+    <p class="important">
+        One important thing about OCR A Level Computer Science is that it is very theory-heavy, 
+        even though many people expect it to mostly be programming.
+    </p>
+    <ol>
+        <li>HTML is used for structure</li>
+        <li>CSS is used for style</li>
+        <li>JavaScript is used for interactivity</li>
+    </ol>
+    <a href="https://www.google.com/">Google</a> <!--To be visible need to put text between tags-->
+    <br>
+    <br>
+    <img src="..\Images\CS_Textbook_Image.jpg" width="350" height="500"> <!--Need to put relative path-->
+    <script>
+        let studentName = "Garen";
+        let subject = "Computer Science";
+        alert("Welcome " + studentName + " to " + subject);
+
+        let firstScore = Number(prompt("Enter Your First Test Score: "));
+        let secondScore = Number(prompt("Enter Your Second Test Score: "));
+        let total = firstScore + secondScore;
+        alert("Your total score is " + total);
+
+        let totalMarks = 0;
+        for(let i=1; i<=5; i++)
+        {
+            let testMark = Number(prompt("Enter A Test Mark"));
+            totalMarks += testMark;
+        }
+        alert("Your Total Marks Is " + totalMarks);
+
+        function calculateGrade(score)
+        {
+            if (score >= 80)
+            {
+                return "A";
+            }
+            else if (score >= 60)
+            {
+                return "B";
+            }
+            else
+            {
+                return "C";
+            }
+        }
+        let examScore = Number(prompt("Enter Your Exam Score: "));
+        let result = calculateGrade(examScore);
+        alert(result);
+
+        function changeMessage()
+        {
+            document.getElementById("mainHeading").innerHTML = "OCR Computer Science Revision Complete";
+        }
+    </script>
+</body>
